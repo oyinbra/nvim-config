@@ -1,6 +1,7 @@
 return {
     'nvim-tree/nvim-tree.lua',
-    dependencies = 'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    enabled = false, -- optional, for file icons
     tag = 'nightly', -- optional, updated every week. (see issue #1193)
     config = function()
       vim.g.loaded_netrw = 1
