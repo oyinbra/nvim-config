@@ -1,0 +1,35 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                KEYBINDINGS                                   #
+-- #                                                                              #
+-- ################################################################################
+vim.g.mapleader = ' '
+local map = vim.api.nvim_set_keymap
+map('n', '<C-h>', '<C-w>h', {noremap = true, silent = false})
+map('n', '<C-l>', '<C-w>l', {noremap = true, silent = false})
+map('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
+map('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
+
+map('i', 'jk', '<ESC>', {noremap = true, silent = false})
+map('i', 'kj', '<ESC>', {noremap = true, silent = false})
+
+map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+
+map('v', '<', '<gv', {noremap = true, silent = false})
+map('v', '>', '>gv', {noremap = true, silent = false})
+
+map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>",
+    {noremap = true, silent = true})
+map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>",
+    {noremap = true, silent = true})
+
+-- Keybindings for persistence
+-- restore the session for the current directory
+vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
+
+-- restore the last session
+vim.api.nvim_set_keymap("n", "<leader>ql",
+                        [[<cmd>lua require("persistence").load({ last = true })<cr>]], {})
+
+-- stop Persistence => session won't be saved on exit
+vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], {})
