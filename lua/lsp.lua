@@ -40,7 +40,7 @@ local on_attach = function(_, bufnr)
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
-  end, { desc = 'Format current buffer with LSP' })
+  end, {desc = 'Format current buffer with LSP'})
 end
 
 -- Enable the following language servers
@@ -49,13 +49,13 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-    clangd = {},
-    -- gopls = {},
-    pyright = {},
-    rust_analyzer = {},
-    tsserver = {},
-    html = {},
-    sumneko_lua = { Lua = { workspace = { checkThirdParty = false }, telemetry = { enable = false } } }
+  clangd = {},
+  -- gopls = {},
+  pyright = {},
+  rust_analyzer = {},
+  tsserver = {},
+  html = {},
+  sumneko_lua = {Lua = {workspace = {checkThirdParty = false}, telemetry = {enable = false}}}
 }
 
 -- Setup neovim lua configuration
@@ -71,16 +71,16 @@ require('mason').setup()
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
 
-mason_lspconfig.setup { ensure_installed = vim.tbl_keys(servers) }
+mason_lspconfig.setup {ensure_installed = vim.tbl_keys(servers)}
 
 mason_lspconfig.setup_handlers {
-    function(server_name)
-      require('lspconfig')[server_name].setup {
-          capabilities = capabilities,
-          on_attach = on_attach,
-          settings = servers[server_name]
-      }
-    end
+  function(server_name)
+    require('lspconfig')[server_name].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = servers[server_name]
+    }
+  end
 }
 
 -- Turn on lsp status information
@@ -92,45 +92,45 @@ local lspkind = require('lspkind')
 local luasnip = require 'luasnip'
 
 cmp.setup {
-    snippet = {
-        expand = function(args)
-          luasnip.lsp_expand(args.body)
-        end
-    },
-    mapping = cmp.mapping.preset.insert {
-        ['<C-d>'] = cmp.mapping.scroll_docs( -4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ---@diagnostic disable-next-line: missing-parameter
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<CR>'] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true },
-        ['<Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          else
-            fallback()
-          end
-        end, { 'i', 's' }),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.jumpable( -1) then
-            luasnip.jump( -1)
-          else
-            fallback()
-          end
-        end, { 'i', 's' })
-    },
-    sources = { { name = 'nvim_lsp' }, { name = 'luasnip' } },
-    formatting = { format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }) }
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end
+  },
+  mapping = cmp.mapping.preset.insert {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ---@diagnostic disable-next-line: missing-parameter
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {behavior = cmp.ConfirmBehavior.Replace, select = true},
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, {'i', 's'})
+  },
+  sources = {{name = 'nvim_lsp'}, {name = 'luasnip'}},
+  formatting = {format = lspkind.cmp_format({with_text = true, maxwidth = 50})}
 }
 
 -- diagnostic signs
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = {Error = " ", Warn = " ", Hint = " ", Info = " "}
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+  vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
 end

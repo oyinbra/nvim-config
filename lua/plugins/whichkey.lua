@@ -46,9 +46,11 @@ return {
           g = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
           t = {
               name = "ToggleTerm",
-              t = { ":ToggleTerm<cr>", "Split Below" },
-              f = { toggle_float, "Floating Terminal" },
-              l = { toggle_lazygit, "LazyGit" }
+              t = { ":ToggleTerm<cr>", "Terminal Below" },
+              f = { toggle_float, "Terminal Floating" },
+              l = { toggle_lazygit, "LazyGit" },
+              v = { ":vsplit<cr>", "Vertical Split" },
+              h = { ":split<cr>", "Horizontal Split" }
           },
           s = {
               name = "LSP",
