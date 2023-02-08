@@ -32,8 +32,9 @@ return {
 
       local mappings = {
           r = { ":source %<cr>", "Source file" },
-          e = { ":Neotree<cr>", "Neotree" },
+          -- e = { ":Neotree<cr>", "Neotree" },
           m = { ":Mason<cr>", "Mason" },
+          -- f = { ":NvimTreeFocus<cr>", "NvimTreeFocus" },
           l = { ":Lazy<cr>", "Lazy" },
           d = { ":Dashboard<cr>", "Dashboard" },
           q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },

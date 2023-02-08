@@ -49,12 +49,12 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-    -- clangd = {},
+    clangd = {},
     -- gopls = {},
-    -- pyright = {},
-    -- rust_analyzer = {},
-    -- tsserver = {},
-
+    pyright = {},
+    rust_analyzer = {},
+    tsserver = {},
+    html = {},
     sumneko_lua = { Lua = { workspace = { checkThirdParty = false }, telemetry = { enable = false } } }
 }
 
@@ -100,6 +100,7 @@ cmp.setup {
     mapping = cmp.mapping.preset.insert {
         ['<C-d>'] = cmp.mapping.scroll_docs( -4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ---@diagnostic disable-next-line: missing-parameter
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true },
         ['<Tab>'] = cmp.mapping(function(fallback)
