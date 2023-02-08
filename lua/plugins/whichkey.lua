@@ -35,7 +35,12 @@ return {
           -- e = { ":Neotree<cr>", "Neotree" },
           m = { ":Mason<cr>", "Mason" },
           -- f = { ":NvimTreeFocus<cr>", "NvimTreeFocus" },
-          l = { ":Lazy<cr>", "Lazy" },
+          s = {
+              name = "Lazy Nvim/Session",
+              s = { '<cmd>lua require("persistence").load({ last = true })<cr>]', "Last Session" },
+              d = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
+              e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" }
+          },
           d = { ":Dashboard<cr>", "Dashboard" },
           q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
           o = { ":ChatGPT<cr>", "Open AI" },
@@ -52,15 +57,17 @@ return {
               v = { ":vsplit<cr>", "Vertical Split" },
               h = { ":split<cr>", "Horizontal Split" }
           },
-          s = {
+          l = {
               name = "LSP",
+              l = { ":Lazy<cr>", "Lazy Manager" },
               i = { ":LspInstall<cr>", "Install" },
+              m = { ":Mason<cr>", "Mason" },
               j = { ":LspInfo<cr>", "Connected Language Servers" },
               k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
               K = { "<cmd>Lspsaga hover_doc<cr>", "Hover Commands" },
               w = { '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>', "Add Workspace Folder" },
               W = { '<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>', "Remove Workspace Folder" },
-              l = {
+              u = {
                   '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>',
                   "List Workspace Folders"
               },
