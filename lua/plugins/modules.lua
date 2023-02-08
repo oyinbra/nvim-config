@@ -46,6 +46,7 @@ return {
 }, -- Old settings
     -- {'terryma/vim-multiple-cursors'}, -- CTRL + N for multiple cursors
     { 'ap/vim-css-color' }, -- CSS Color Preview
+    { 'wakatime/vim-wakatime' }, -- Time spent on nvim. API key needed
     { 'rafi/awesome-vim-colorschemes' }, -- Color Schemes
     { 'tpope/vim-surround' }, -- Surrounding ysw
     { 'mattn/emmet-vim' }, { 'airblade/vim-gitgutter' },
