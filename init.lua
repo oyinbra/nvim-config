@@ -31,4 +31,4 @@ require('keymaps')
 local map = vim.api.nvim_set_keymap
 -- Tree Toggle
 -- map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-map('n', '<leader>e', ':NeoTreeFloatToggle<CR>', { noremap = true, silent = true })
+map('n', '<leader>e', ':NeoTreeReveal<CR>', { noremap = true, silent = true })

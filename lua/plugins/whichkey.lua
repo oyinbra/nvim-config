@@ -35,13 +35,12 @@ return {
           f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
           -- e = { ":Neotree<cr>", "Neotree" },
           m = { ":Mason<cr>", "Mason" },
-          -- f = { ":NvimTreeFocus<cr>", "NvimTreeFocus" },
-          s = {
-              name = "Session",
-              s = { '<cmd>lua require("persistence").load({ last = true })<cr>]', "Last Session" },
-              d = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
-              e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" }
-          },
+          -- s = {
+          --     name = "Session",
+          --     s = { '<cmd>lua require("persistence").load({ last = true })<cr>', "Last Session" },
+          --     d = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
+          --     e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" }
+          -- },
           d = { ":Alpha<cr>", "Dashboard" },
           q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
           o = { ":ChatGPT<cr>", "Open AI" },
