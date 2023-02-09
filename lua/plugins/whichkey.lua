@@ -32,16 +32,17 @@ return {
 
       local mappings = {
           r = { ":source %<cr>", "Source file" },
+          f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
           -- e = { ":Neotree<cr>", "Neotree" },
           m = { ":Mason<cr>", "Mason" },
           -- f = { ":NvimTreeFocus<cr>", "NvimTreeFocus" },
           s = {
-              name = "Lazy Nvim/Session",
+              name = "Session",
               s = { '<cmd>lua require("persistence").load({ last = true })<cr>]', "Last Session" },
               d = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
               e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" }
           },
-          d = { ":Dashboard<cr>", "Dashboard" },
+          d = { ":Alpha<cr>", "Dashboard" },
           q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
           o = { ":ChatGPT<cr>", "Open AI" },
           w = { name = "Write", w = { ":w<cr>", "Write" }, q = { ":wq<cr>", "Write & Quit" } },

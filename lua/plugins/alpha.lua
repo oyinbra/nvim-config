@@ -104,7 +104,7 @@ return {
     }
 
     local dashboard = require "alpha.themes.dashboard"
-    dashboard.section.header.val = headers.hydra
+    dashboard.section.header.val = headers.krakedking
 
     dashboard.section.buttons.val = {
       dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),

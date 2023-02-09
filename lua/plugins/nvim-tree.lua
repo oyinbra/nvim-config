@@ -1,6 +1,8 @@
 return {
     'nvim-tree/nvim-tree.lua',
     dependencies = 'nvim-tree/nvim-web-devicons',
+    build = ":TSUpdate",
+    event = "BufWinEnter",
     enabled = false, -- optional, for file icons
     tag = 'nightly', -- optional, updated every week. (see issue #1193)
     config = function()
