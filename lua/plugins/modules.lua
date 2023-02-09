@@ -23,10 +23,10 @@ return {
 			"folke/neodev.nvim",
 		},
 	},
-	{ -- Autocompletion
-		"hrsh7th/nvim-cmp",
-		dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
-	},
+	-- { -- Autocompletion
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
+	-- },
 	{ "rose-pine/neovim" },
 	{ "folke/tokyonight.nvim" },
 	{ "navarasu/onedark.nvim" },
@@ -79,13 +79,13 @@ return {
 	-- {'hrsh7th/vim-vsnip'},
 	-- {'hrsh7th/vim-vsnip-integ'},
 	{ "onsails/lspkind-nvim" },
-	{
-		"lewis6991/gitsigns.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("gitsigns").setup({ current_line_blame = true })
-		end,
-	},
+	-- {
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- 	config = function()
+	-- 		require("gitsigns").setup({ current_line_blame = true })
+	-- 	end,
+	-- },
 	-- Plugins from lazy vim
 	{
 		"folke/persistence.nvim",
