@@ -18,8 +18,11 @@ vim.opt.termguicolors = true
 -- Lazy plugins plugins
 require('lazy').setup('plugins')
 
+-- Themes settings
+require('theme')
+
 -- Lsp settings
-require('lsp')
+-- require('lsp')
 
 -- Options
 require('options')
@@ -27,8 +30,7 @@ require('options')
 -- Keybindings
 require('keymaps')
 
--- vim.g.mapleader = ' '
 local map = vim.api.nvim_set_keymap
 -- Tree Toggle
 -- map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-map('n', '<leader>e', ':NeoTreeReveal<CR>', { noremap = true, silent = true })
+-- map('n', '<leader>e', ':NeoTreeReveal<CR>', { noremap = true, silent = true })

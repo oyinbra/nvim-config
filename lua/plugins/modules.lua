@@ -27,9 +27,8 @@ return {
 	-- 	"hrsh7th/nvim-cmp",
 	-- 	dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
 	-- },
-	{ "rose-pine/neovim" },
-	{ "folke/tokyonight.nvim" },
-	{ "navarasu/onedark.nvim" },
+	-- { "folke/tokyonight.nvim" },
+	-- { "navarasu/onedark.nvim" },
 	{ -- Additional text objects via treesitter
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		dependencies = "nvim-treesitter",

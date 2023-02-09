@@ -87,7 +87,10 @@ mason_lspconfig.setup_handlers {
 require('fidget').setup()
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+
+
+
+   local cmp = require 'cmp'
 local lspkind = require('lspkind')
 local luasnip = require 'luasnip'
 
