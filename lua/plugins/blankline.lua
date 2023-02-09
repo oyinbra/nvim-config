@@ -4,7 +4,7 @@ return {
   config = function()
     require("indent_blankline").setup {
       buftype_exclude = {"terminal"},
-      filetype_exclude = {"dashboard", "NvimTree", "packer", "lsp-installer"},
+      filetype_exclude = {"dashboard", "mason", "alpha", "NvimTree", "packer", "lsp-installer"},
       show_current_context = true,
       context_patterns = {
         "class", "return", "function", "method", "^if", "^while", "jsx_element", "^for", "^object",
