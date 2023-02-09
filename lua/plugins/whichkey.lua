@@ -20,15 +20,15 @@ return {
 			},
 		})
 
-		local Terminal = require("toggleterm.terminal").Terminal
-		local toggle_float = function()
-			local float = Terminal:new({ direction = "float" })
-			return float:toggle()
-		end
-		local toggle_lazygit = function()
-			local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
-			return lazygit:toggle()
-		end
+		-- local Terminal = require("toggleterm.terminal").Terminal
+		-- local toggle_float = function()
+		-- 	local float = Terminal:new({ direction = "float" })
+		-- 	return float:toggle()
+		-- end
+		-- local toggle_lazygit = function()
+		-- 	local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
+		-- 	return lazygit:toggle()
+		-- end
 
 		local mappings = {
 			-- r = { ":source %<cr>", "Source file" },
@@ -67,7 +67,7 @@ return {
 			t = {
 				name = "Terminal",
 				f = { ":ToggleTerm direction=float<cr>", "Float" },
-				b = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
+				t = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
 				s = { ":ToggleTerm size=50 direction=vertical<cr>", "Side" },
 				v = { ":vsplit<cr>", "Vertical Split" },
 				h = { ":split<cr>", "Horizontal Split" },
