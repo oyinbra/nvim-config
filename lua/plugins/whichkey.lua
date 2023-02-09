@@ -42,7 +42,7 @@ return {
 			},
 			["r"] = { ":%d+<cr>", "Remove All Text" },
 			["y"] = { ":%y+<cr>", "Yank All Text" },
-			["e"] = { ":NeoTreeReveal<cr>", "Explorer" },
+			["e"] = { ":NeoTreeShowToggle<cr>", "Explorer" },
 			p = {
 				name = "Plugins",
 				c = { ":Lazy clean<cr>", "Clean" },
