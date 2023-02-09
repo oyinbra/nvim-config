@@ -1,34 +1,28 @@
 return {
-    'jose-elias-alvarez/null-ls.nvim',
-    config = function()
-      local null_ls = require('null-ls')
+  "jose-elias-alvarez/null-ls.nvim",
+  event = { "BufReadPost", "BufNewFile" },
+  config = function()
+    local null_ls = require "null-ls"
 
-      local formatting = null_ls.builtins.formatting
+    -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+    local formatting = null_ls.builtins.formatting
+    -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+    -- local diagnostics = null_ls.builtins.diagnostics
 
-      null_ls.setup({
-          sources = {
-              formatting.tidy, formatting.prettierd, formatting.prettier_d_slim,
-              formatting.prettier_eslint, formatting.rustywind, formatting.rome, formatting.prettier,
-              formatting.black, formatting.tidy, formatting.gofmt, formatting.shfmt,
-              formatting.clang_format, formatting.cmake_format, formatting.dart_format,
-              formatting.lua_format.with({
-                  extra_args = {
-                      '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
-                      '--break-after-table-lb', '--indent-width=2'
-                  }
-              }), formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
-          },
-          on_attach = function(client)
-            if client.server_capabilities.documentFormattingProvider then
-              vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
-            end
-            vim.cmd [[
-      augroup document_highlight
-        autocmd! * <buffer>
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]]
-          end
-      })
-    end
+    null_ls.setup {
+      debug = false,
+      sources = {
+        formatting.prettier.with {
+          extra_filetypes = { "toml", "solidity" },
+          extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+        },
+        formatting.gofumpt,
+        formatting.autopep8,
+        formatting.stylua,
+        formatting.clang_format.with {
+          filetypes = { "cpp", "c" },
+        },
+      },
+    }
+  end,
 }
