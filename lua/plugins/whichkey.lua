@@ -31,9 +31,7 @@ return {
 		-- end
 
 		local mappings = {
-			-- r = { ":source %<cr>", "Source file" },
 			f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
-			-- e = { ":Neotree<cr>", "Neotree" },
 			s = {
 				name = "Session",
 				s = { '<cmd>lua require("persistence").load({ last = true })<cr>', "Last Session" },
@@ -42,7 +40,7 @@ return {
 			},
 			["r"] = { ":%d+<cr>", "Remove All Text" },
 			["y"] = { ":%y+<cr>", "Yank All Text" },
-			["e"] = { ":NeoTreeShowToggle<cr>", "Explorer" },
+			["e"] = { ":NeoTreeFocusToggle<cr>", "Explorer" },
 			p = {
 				name = "Plugins",
 				c = { ":Lazy clean<cr>", "Clean" },
@@ -57,10 +55,12 @@ return {
 				u = { ":Lazy update<cr>", "Update" },
 			},
 			d = { ":Alpha<cr>", "Dashboard" },
-			q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
-			o = { ":ChatGPT<cr>", "Open AI" },
-			w = { name = "Write", w = { ":w<cr>", "Write" }, q = { ":wq<cr>", "Write & Quit" } },
-			x = { ":bdelete<cr>", "Close" },
+			-- q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
+			q = { ":q!<cr>", "Quit" },
+			c = { ":ChatGPT<cr>", "ChatGPT" },
+			w = { ":w<cr>", "Write" },
+			x = { ":x<cr>", "Write & Quit" },
+			b = { ":bdelete<cr>", "Buffer Close" },
 			E = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
 			[" "] = { ":Telescope find_files<cr>", "Telescope Find Files" },
 			g = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
