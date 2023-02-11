@@ -32,15 +32,11 @@ return {
 
 		local mappings = {
 			f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
-			s = {
-				name = "Session",
-				s = { '<cmd>lua require("persistence").load({ last = true })<cr>', "Last Session" },
-				d = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
-				e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" },
-			},
+			s = { ":source %<cr>", "Source" },
 			["r"] = { ":%d+<cr>", "Remove All Text" },
 			["y"] = { ":%y+<cr>", "Yank All Text" },
-			["e"] = { ":NeoTreeFocusToggle<cr>", "Explorer" },
+			["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
+			["E"] = { ":NeoTreeClose<cr>", "Close Explorer" },
 			p = {
 				name = "Plugins",
 				c = { ":Lazy clean<cr>", "Clean" },
@@ -61,7 +57,7 @@ return {
 			w = { ":w<cr>", "Write" },
 			x = { ":x<cr>", "Write & Quit" },
 			b = { ":bdelete<cr>", "Buffer Close" },
-			E = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
+			C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
 			[" "] = { ":Telescope find_files<cr>", "Telescope Find Files" },
 			g = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
 			t = {
@@ -81,7 +77,10 @@ return {
 				I = { ":Lspsaga incoming_calls<cr>", "Incoming Calls" },
 				O = { ":Lspsaga outgoing_calls<cr>", "Outgoing Calls" },
 				m = { ":Mason<cr>", "Mason Installer" },
-				j = {
+				s = { '<cmd>lua require("persistence").load({ last = true })<cr>', "Last Session" },
+				x = { '<cmd>lua require("persistence").load()<cr>', "Last Directory Session" },
+				e = { '<cmd>lua require("persistence").stop()<cr>]', "End Last Session" },
+				n = {
 					":Lspsaga diagnostic_jump_next<cr>",
 					"Next Diagnostic",
 				},
@@ -92,8 +91,8 @@ return {
 				r = { ":Lspsaga rename<cr>", "Rename" },
 				d = { ":Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
 				w = { ":Telescope diagnostics<cr>", "Workspace Diagnostics" },
-				s = { ":Telescope lsp_document_symbols<cr>", "Document Symbols" },
-				S = { ":Telescope lsp_workspace_symbols<cr>", "Workspace Symbols" },
+				t = { ":Telescope lsp_document_symbols<cr>", "Document Symbols" },
+				T = { ":Telescope lsp_workspace_symbols<cr>", "Workspace Symbols" },
 			},
 			z = {
 				name = "Focus",
