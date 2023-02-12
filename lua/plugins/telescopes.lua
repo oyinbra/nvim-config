@@ -43,6 +43,8 @@ return {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
             ["<esc>"] = actions.close,
+            ["kl"] = actions.close,
+            ["lk"] = actions.close,
             ["<CR>"] = actions.select_default + actions.center
           },
           n = {
