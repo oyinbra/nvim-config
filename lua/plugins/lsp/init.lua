@@ -64,7 +64,7 @@ return {
                   -- "emmet_ls",
                   "pyright",
                   -- "omnisharp",
-                  "yamlls",
+                  -- "yamlls",
                   -- "gopls",
                   -- "lemminx",
                   "vimls",

@@ -1,4 +1,4 @@
-local name = "monokai"
+local name = "tokyonight-moon"
 
 -- Check if there's a colorscheme configuration
 pcall(require, "theme." .. name)

@@ -33,7 +33,8 @@ return {
 		local mappings = {
 			f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
 			s = { ":source %<cr>", "Source" },
-			["r"] = { ":%d+<cr>", "Remove All Text" },
+			["R"] = { ":%d+<cr>", "Remove All Text" },
+			["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
 			["y"] = { ":%y+<cr>", "Yank All Text" },
 			["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
 			["E"] = { ":NeoTreeClose<cr>", "Close Explorer" },
@@ -72,9 +73,10 @@ return {
 				name = "LSP",
 				f = { ":Format<cr>", "Format" },
 				a = { ":Lspsaga code_action<cr>", "Code Action" },
-				i = { ":LspInfo<cr>", "Info" },
+				i = { ":LspInstall<cr>", "Install" },
+				I = { ":LspInfo<cr>", "Info" },
 				o = { ":Lspsaga outline<cr>", "Code Outline" },
-				I = { ":Lspsaga incoming_calls<cr>", "Incoming Calls" },
+				c = { ":Lspsaga incoming_calls<cr>", "Incoming Calls" },
 				O = { ":Lspsaga outgoing_calls<cr>", "Outgoing Calls" },
 				m = { ":Mason<cr>", "Mason Installer" },
 				s = { '<cmd>lua require("persistence").load({ last = true })<cr>', "Last Session" },
@@ -99,16 +101,6 @@ return {
 				z = { ":ZenMode<cr>", "Toggle Zen Mode" },
 				t = { ":Twilight<cr>", "Toggle Twilight" },
 			},
-			-- p = {
-			--   name = "Packer",
-			--   r = {":PackerClean<cr>", "Remove Unused Plugins"},
-			--   c = {":PackerCompile profile=true<cr>", "Recompile Plugins"},
-			--   i = {":PackerInstall<cr>", "Install Plugins"},
-			--   p = {":PackerProfile<cr>", "Packer Profile"},
-			--   s = {":PackerSync<cr>", "Sync Plugins"},
-			--   S = {":PackerStatus<cr>", "Packer Status"},
-			--   u = {":PackerUpdate<cr>", "Update Plugins"}
-			-- }
 		}
 
 		local opts = { prefix = "<leader>" }
