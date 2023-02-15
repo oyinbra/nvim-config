@@ -56,8 +56,8 @@ return {
 	{ "tpope/vim-surround" }, -- Surrounding ysw
 	{ "mattn/emmet-vim" },
 	{ "airblade/vim-gitgutter" },
-	{ "windwp/nvim-ts-autotag", event = "InsertEnter", dependecies = "nvim-treesitter" },
-	{ "p00f/nvim-ts-rainbow", dependecies = "nvim-treesitter" },
+	{ "windwp/nvim-ts-autotag", event = "InsertEnter"},
+	{ "p00f/nvim-ts-rainbow" },
 	{
 		"folke/which-key.nvim",
 		event = "BufWinEnter",
