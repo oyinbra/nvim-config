@@ -38,6 +38,11 @@ return {
 			["y"] = { ":%y+<cr>", "Yank All Text" },
 			["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
 			["E"] = { ":NeoTreeClose<cr>", "Close Explorer" },
+      h = {
+         name = "Health",
+        h = { ":checkhealth<cr>", "Health"},
+        l = { ":checkhealth lazy<cr>", "Lazy"},
+      },
 			p = {
 				name = "Plugins",
 				c = { ":Lazy clean<cr>", "Clean" },
