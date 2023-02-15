@@ -18,7 +18,8 @@ return {
         },
         formatting.gofumpt,
         formatting.autopep8,
-        formatting.stylua,
+        -- formatting.stylua,
+        formatting.prettier,
         formatting.clang_format.with {
           filetypes = { "cpp", "c" },
         },
