@@ -1,5 +1,6 @@
 return {
-  'nvim-lualine/lualine.nvim', enabled = true,
+  'nvim-lualine/lualine.nvim',
+  enabled = true,
   dependencies = 'nvim-tree/nvim-web-devicons',
   -- opt = true,
   config = function()
@@ -7,7 +8,7 @@ return {
       options = {
         icons_enabled = true,
         -- theme = 'dracula',
-        component_separators = {left = '', right = ''}
+        component_separators = { left = '', right = '' }
         -- section_separators = {left = '', right = ''}
       }
     }
