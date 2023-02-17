@@ -33,7 +33,7 @@ return {
     local mappings = {
       f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       s = { ":source %<cr>", "Source" },
-      ["R"] = { ":%d+<cr>", "Remove All Text" },
+      ["o"] = { ":%d+<cr>", "Delete All Text" },
       ["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
       ["y"] = { ":%y+<cr>", "Yank All Text" },
       ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
@@ -57,7 +57,6 @@ return {
         u = { ":Lazy update<cr>", "Update" },
       },
       d = { ":Alpha<cr>", "Dashboard" },
-      -- q = { name = "Quit", q = { ":q<cr>", "Quit" }, w = { ":q!<cr>", "Quit Without Saving" } },
       q = { ":q!<cr>", "Quit" },
       c = { ":ChatGPT<cr>", "ChatGPT" },
       w = { ":w<cr>", "Write" },

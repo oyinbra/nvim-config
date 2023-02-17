@@ -20,7 +20,7 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.updatetime = 300
 vim.o.timeoutlen = 100
-vim.o.clipboard = "unnamedplus" -- allows copy to system clipboard
+vim.o.clipboard = "unnamedplus" -- allows yanking to system clipboard
 vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.scrolloff = 3
@@ -40,17 +40,6 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.api.nvim_set_var("modifiable", 1)
-
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-      vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*'
-})
 
 -- Save undo history
 vim.o.undofile = true
