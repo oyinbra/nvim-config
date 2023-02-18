@@ -4,30 +4,35 @@
 -- #                                                                              #
 -- ################################################################################
 
+M = {}
+
 local map = vim.api.nvim_set_keymap
-map('n', '<C-h>', '<C-w>h', {noremap = true, silent = false})
-map('n', '<C-l>', '<C-w>l', {noremap = true, silent = false})
-map('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
-map('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
+local opts = { noremap = true, silent = true }
+
+-- Better window navigation
+map('n', '<C-h>', '<C-w>h', opts)
+map('n', '<C-l>', '<C-w>l', opts)
+map('n', '<C-j>', '<C-w>j', opts)
+map('n', '<C-k>', '<C-w>k', opts)
 
 -- TODO: To yank text out of vim into system clipboard manager
-map('n', '<C-S-c>', '"+y', {noremap = true, silent = false})
+map('n', '<C-S>c', '"+y', opts)
 
 -- Move text up and down
 -- map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 -- map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- NOTE: Press jk or lk to return back to normal mode instead of using the escape key all the time
-map('i', 'kl', '<ESC>', {noremap = true, silent = false})
-map('i', 'lk', '<ESC>', {noremap = true, silent = false})
-map('i', 'JK', '<ESC>', {noremap = true, silent = false})
-map('i', 'LK', '<ESC>', {noremap = true, silent = false})
+map('i', 'kl', '<ESC>', opts)
+map('i', 'lk', '<ESC>', opts)
+map('i', 'JK', '<ESC>', opts)
+map('i', 'LK', '<ESC>', opts)
 
 -- Tree Toggle
 -- map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
-map('v', '<', '<gv', {noremap = true, silent = false})
-map('v', '>', '>gv', {noremap = true, silent = false})
+map('v', '<', '<gv', opts)
+map('v', '>', '>gv', opts)
 
 map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>",
     {noremap = true, silent = true})
@@ -51,3 +56,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*'
 })
 
+return M

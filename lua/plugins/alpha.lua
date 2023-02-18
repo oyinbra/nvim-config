@@ -743,9 +743,9 @@ return {
       dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
       dashboard.button("t", "  Find Text", ":Telescope live_grep<CR>"),
       dashboard.button("c", "  Configuration", ":e $MYVIMRC<CR>"),
-      dashboard.button("u", "  Update Plugins", ":Lazy update<CR>"),
+      dashboard.button("u", "  Update Plugins", ":Lazy update<CR>"),
       dashboard.button("q", "  Quit Neovim", ":qa!<CR>"),
-      dashboard.button("l", "  Last Session", '<cmd>lua require("persistence").load({ last = true })<cr>'),
+      dashboard.button("l", "  Last Session", '<cmd>lua require("persistence").load({ last = true })<cr>'),
     }
 
     local footer = function()

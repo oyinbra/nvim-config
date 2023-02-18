@@ -3,6 +3,9 @@ return {
 		"Alexis12119/nightly.nvim",
 		lazy = true,
 	},
+  {
+    "arturgoms/moonbow.nvim"
+  },
 	{
 		"rose-pine/neovim",
 	},
