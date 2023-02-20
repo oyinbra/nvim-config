@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile" },
+  cmd = { "LspInfo", "LspInstall", "LspUninstall" },
   config = function()
     require("neodev").setup({
       library = {
