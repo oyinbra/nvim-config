@@ -37,7 +37,7 @@ return {
       ["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
       ["y"] = { ":%y+<cr>", "Yank All Text" },
       ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
-      ["E"] = { ":NeoTreeClose<cr>", "Close Explorer" },
+      ["3"] = { ":NeoTreeClose<cr>", "Close Explorer" },
       h = {
         name = "Health",
         h = { ":checkhealth<cr>", "Health" },
@@ -68,7 +68,7 @@ return {
       t = {
         name = "Terminal",
         f = { ":ToggleTerm direction=float<cr>", "Float" },
-        t = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
+        b = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
         s = { ":ToggleTerm size=50 direction=vertical<cr>", "Side" },
         v = { ":vsplit<cr>", "Vertical Split" },
         h = { ":split<cr>", "Horizontal Split" },
