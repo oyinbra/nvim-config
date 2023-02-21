@@ -1,5 +1,6 @@
 return {
   "tamton-aquib/staline.nvim",
+  -- enabled = false,
   config = function()
     require("staline").setup({
       sections = {
