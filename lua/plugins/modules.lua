@@ -3,6 +3,8 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependencies = "nvim-treesitter",
   },
+  -- syntax hightlighting for kitty
+  { "fladson/vim-kitty" },
   -- visula multi cursor
   { "mg979/vim-visual-multi" },
   -- Old settings
