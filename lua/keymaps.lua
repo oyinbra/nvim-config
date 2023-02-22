@@ -8,6 +8,7 @@ M = {}
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local keymap = vim.keymap
 
 -- Better window navigation
 map('n', '<C-h>', '<C-w>h', opts)
@@ -35,9 +36,9 @@ map('v', '<', '<gv', opts)
 map('v', '>', '>gv', opts)
 
 map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>",
-    {noremap = true, silent = true})
+  { noremap = true, silent = true })
 map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>",
-    {noremap = true, silent = true})
+  { noremap = true, silent = true })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -49,11 +50,23 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-      vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*'
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*'
+})
+
+-- Insert a blank line below or above current line (do not move the cursor),
+-- see https://stackoverflow.com/a/16136133/6064933
+keymap.set("n", "<space>o", "printf('m`%so<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line below",
+})
+
+keymap.set("n", "<space>O", "printf('m`%sO<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line above",
 })
 
 return M
