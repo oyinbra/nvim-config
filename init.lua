@@ -1,4 +1,4 @@
--- Lazy vim setup
+-- LazyVim setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -9,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Set space bar as Leader Key
+-- Set space bar as Leader Key and termguicolors as true
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.termguicolors = true
@@ -20,16 +20,8 @@ require('lazy').setup('plugins')
 -- Themes settings
 require('theme')
 
--- Lsp settings
--- require('lsp')
-
 -- Options
-require('options')
+require('options.options')
 
 -- Keybindings
-require('keymaps')
-
--- local map = vim.api.nvim_set_keymap
--- Tree Toggle
--- map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
--- map('n', '<leader>e', ':NeoTreeReveal<CR>', { noremap = true, silent = true })
+require('keymaps.keymaps')

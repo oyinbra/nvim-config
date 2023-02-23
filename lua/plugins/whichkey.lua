@@ -33,7 +33,7 @@ return {
     local mappings = {
       f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       s = { ":source %<cr>", "Source" },
-      ["o"] = { ":%d+<cr>", "Delete All Text" },
+      ["Y"] = { ":%d+<cr>", "Delete All Text" },
       ["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
       ["y"] = { ":%y+<cr>", "Yank All Text" },
       ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
