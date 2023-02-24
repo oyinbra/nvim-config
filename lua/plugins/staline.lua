@@ -33,9 +33,13 @@ return {
         expand_null_ls = true,
         true_colors = true,
         line_column = " [%l/%L] :%c  ",
-        branch_symbol = " ",
+        branch_symbol = "  ",
       },
-
+      special_table = {
+        NvimTree         = { 'File Explorer', ' ' },
+        lazy          = { 'Lazy', ' ' },
+        TelescopePrompt = { 'Telescope', ' ' }
+      },
     })
 
     require("stabline").setup({
