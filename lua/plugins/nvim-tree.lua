@@ -40,10 +40,11 @@ return {
     local tree_cb = nvim_tree_config.nvim_tree_callback
 
     nvim_tree.setup({
-      disable_netrw = false,
+      disable_netrw = true,
       auto_reload_on_write = false,
+      hijack_netrw = true,
       diagnostics = {
-        enable = false,
+        enable = true,
         icons = {
           hint = "",
           info = "",
@@ -90,6 +91,11 @@ return {
       },
       filters = {
         dotfiles = true,
+      },
+      modified = {
+        enable = true,
+        show_on_dirs = true,
+        show_on_open_dirs = true,
       },
       view = {
         cursorline = false,
