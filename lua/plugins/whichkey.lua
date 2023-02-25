@@ -36,8 +36,10 @@ return {
       ["Y"] = { ":%d+<cr>", "Delete All Text" },
       ["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
       ["y"] = { ":%y+<cr>", "Yank All Text" },
-      ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
-      ["3"] = { ":NeoTreeClose<cr>", "Close Explorer" },
+      -- ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
+      -- ["3"] = { ":NeoTreeClose<cr>", "Close Explorer" },
+      -- ["e"] = { ":NvimTreeOpen<cr>", "Explorer" },
+      ["e"] = { ":NvimTreeToggle<cr>", "Close Explorer" },
       h = {
         name = "Health",
         h = { ":checkhealth<cr>", "Health" },

@@ -12,6 +12,7 @@ return {
   dependencies = {
     {
       "nvim-tree/nvim-web-devicons",
+      's1n7ax/nvim-window-picker',
       config = function()
         local icons = require("nvim-web-devicons")
 

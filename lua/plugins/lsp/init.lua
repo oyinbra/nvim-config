@@ -26,18 +26,18 @@ return {
   end,
   dependencies = {
     { "folke/neodev.nvim" },
-    {
-      "j-hui/fidget.nvim", -- Useful status updates for LSP
-      config = function()
-        require("fidget").setup {
-          sources = { -- Sources to configure
-            jdtls = { -- Name of source
-              ignore = true, -- Ignore notifications from this source
-            },
-          },
-        }
-      end,
-    },
+    -- {
+    --   "j-hui/fidget.nvim", -- Useful status updates for LSP
+    --   config = function()
+    --     require("fidget").setup {
+    --       sources = { -- Sources to configure
+    --         jdtls = { -- Name of source
+    --           ignore = true, -- Ignore notifications from this source
+    --         },
+    --       },
+    --     }
+    --   end,
+    -- },
     {
       "williamboman/mason.nvim",
       cmd = {
