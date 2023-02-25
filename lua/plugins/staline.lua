@@ -19,8 +19,7 @@ return {
         right = {
           "file_name",
           -- "line_column",
-          percentage,
-          ' ',
+          percentage, ' ',
         },
       },
       mode_colors = {
