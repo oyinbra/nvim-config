@@ -735,7 +735,7 @@ return {
     local dashboard = require "alpha.themes.dashboard"
 
     -- NOTE: To change ascii for alpha dashboard, replace the number below with your preffered choice 
-    dashboard.section.header.val = headers.a20
+    dashboard.section.header.val = headers.a05
 
     dashboard.section.buttons.val = {
       dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
