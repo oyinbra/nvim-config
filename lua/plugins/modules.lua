@@ -32,4 +32,5 @@ return {
       require("persistence").setup()
     end,
   },
+  -- { "typicode/bg.nvim" }, -- automatically sync your terminal background with your color scheme
 }
