@@ -79,7 +79,7 @@ return {
         ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1)),
 ---@diagnostic disable-next-line: missing-parameter
         ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-        ["<C-e>"] = cmp.mapping {
+        ["<C-x>"] = cmp.mapping {
           i = cmp.mapping.abort(),
           c = cmp.mapping.close(),
         },
@@ -172,3 +172,4 @@ return {
     })
   end,
 }
+
