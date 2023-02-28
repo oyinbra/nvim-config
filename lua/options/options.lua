@@ -1,10 +1,10 @@
 -- ################################################################################
 -- #                                                                              #
--- #                            OPTIONS CONFIGURATIONS                            #
+-- #                               OPTIONS CONFIG                                 #
 -- #                                                                              #
 -- ################################################################################
 
-M = {}
+local M = {}
 vim.cmd('filetype plugin indent on')
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.hidden = true
@@ -48,5 +48,7 @@ vim.o.undofile = true
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0
 
 return M
