@@ -32,5 +32,6 @@ return {
       require("persistence").setup()
     end,
   },
-  -- { "typicode/bg.nvim" }, -- automatically sync your terminal background with your color scheme
+  -- makes some plugins dot-repeatable like leap
+  { "tpope/vim-repeat", event = "VeryLazy" },
 }
