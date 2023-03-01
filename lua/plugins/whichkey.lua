@@ -1,3 +1,9 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                WHICHKEY CONFIG                               #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "folke/which-key.nvim",
   event = "BufWinEnter",
@@ -33,13 +39,16 @@ return {
     local mappings = {
       f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       s = { ":source %<cr>", "Source" },
-      ["Y"] = { ":%d+<cr>", "Delete All Text" },
-      ["r"] = { ":Telescope oldfiles<CR>", "Recent Files" },
-      ["y"] = { ":%y+<cr>", "Yank All Text" },
-      -- ["e"] = { ":NeoTreeFocus<cr>", "Explorer" },
-      -- ["3"] = { ":NeoTreeClose<cr>", "Close Explorer" },
-      -- ["e"] = { ":NvimTreeOpen<cr>", "Explorer" },
-      ["e"] = { ":NvimTreeToggle<cr>", "Close Explorer" },
+      Y = { ":%d+<cr>", "Delete All Text" },
+      r = { ":Telescope oldfiles<CR>", "Recent Files" },
+      y = { ":%y+<cr>", "Yank All Text" },
+      -- e = { ":NeoTreeFocus<cr>", "Explorer" },
+      -- ["3"] = { ":NeoTreeFocus<cr>", "Close Explorer" },
+      e = { ":NvimTreeOpen<cr>", "Explorer Open" },
+      ["3"] = { ":NvimTreeToggle<cr>", "Explorer Toggle" },
+      u = {
+        name = "Window",
+      },
       h = {
         name = "Health",
         h = { ":checkhealth<cr>", "Health" },
@@ -72,8 +81,8 @@ return {
         f = { ":ToggleTerm direction=float<cr>", "Float" },
         b = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
         s = { ":ToggleTerm size=50 direction=vertical<cr>", "Side" },
-        v = { ":vsplit<cr>", "Vertical Split" },
-        h = { ":split<cr>", "Horizontal Split" },
+        -- v = { ":vsplit<cr>", "Vertical Split" },
+        -- h = { ":split<cr>", "Horizontal Split" },
       },
       l = {
         name = "LSP",
