@@ -5,6 +5,7 @@
 -- ################################################################################
 
 local M = {}
+
 vim.cmd('filetype plugin indent on')
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.hidden = true
@@ -50,5 +51,13 @@ vim.o.undofile = true
 vim.o.completeopt = 'menuone,noselect'
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- vim.o.autowrite = true -- Enable auto write
+vim.o.confirm = true -- Confirm to save changes before exiting modified buffer
+-- vim.o.formatoptions = "jcroqlnt" -- tcqj
+-- vim.o.grepformat = "%f:%l:%c:%m"
+-- vim.o.grepprg = "rg --vimgrep"
+-- vim.o.splitbelow = true -- Put new windows below current
+-- vim.o.splitright = true -- Put new windows right of current
 
 return M
