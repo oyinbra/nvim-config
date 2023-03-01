@@ -58,4 +58,43 @@ keymap.set("n", "<space>O", "printf('m`%sO<ESC>``', v:count1)", {
   desc = "insert line above",
 })
 
+-- Resize window using <ctrl> arrow keys
+map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+
+-- Move Lines
+map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+
+-- Clear search with <esc>
+-- map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+
+-- Clear search, diff update and redraw
+-- taken from runtime/lua/_editor.lua
+map(
+  "n",
+  "<leader>ur",
+  "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+  { desc = "Redraw / clear hlsearch / diff update" }
+)
+
+-- map({ "n", "x" }, "gw", "*N", { desc = "Search word under cursor" })
+
+-- save file
+-- map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- windows
+map("n", "<leader>uw", "<C-W>p", { desc = "Other window" })
+map("n", "<leader>ud", "<C-W>c", { desc = "Delete window" })
+map("n", "<leader>u-", "<C-W>s", { desc = "Split window below" })
+map("n", "<leader>u|", "<C-W>v", { desc = "Split window right" })
+map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
+map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
+
 return M
