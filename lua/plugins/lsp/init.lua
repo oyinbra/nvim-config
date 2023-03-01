@@ -69,6 +69,7 @@ return {
           -- "gopls",
           -- "lemminx",
           "vimls",
+          "lua_ls",
           -- "cmake",
           -- "powershell_es",
         }
