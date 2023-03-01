@@ -1,6 +1,7 @@
 return {
-  "nvim-tree/nvim-tree.lua",
-  -- enabled = false,
+  'nvim-tree/nvim-tree.lua',
+  -- dependencies = 'nvim-tree/nvim-web-devicons',
+  -- enabled = false, -- optional, for file icons
   module = true,
   cmd = {
     "NvimTreeOpen",
@@ -35,15 +36,21 @@ return {
       end,
     },
   },
+  tag = 'nightly', -- optional, updated every week. (see issue #1193)
   config = function()
-    local nvim_tree = require("nvim-tree")
-    local nvim_tree_config = require("nvim-tree.config")
-    local tree_cb = nvim_tree_config.nvim_tree_callback
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+    vim.opt.termguicolors = true
+    vim.g.nvim_tree_width = 25
+    vim.g.nvim_tree_gitignore = 1
+    vim.g.nvim_tree_indent_markers = 1
 
-    nvim_tree.setup({
-      disable_netrw = true,
-      auto_reload_on_write = false,
-      hijack_netrw = true,
+    require("nvim-tree").setup({
+      sort_by = "case_sensitive",
+      -- view = { width = 30, mappings = { list = { { key = "u", action = "dir_up" } } } },
+      -- renderer = { group_empty = true },
+      filters = { dotfiles = true },
+      hijack_directories = { enable = true, auto_open = true },
       diagnostics = {
         enable = true,
         icons = {
@@ -52,11 +59,6 @@ return {
           warning = "",
           error = "",
         },
-      },
-      update_focused_file = {
-        enable = true,
-        update_cwd = true,
-        ignore_list = {},
       },
       renderer = {
         icons = {
@@ -82,24 +84,8 @@ return {
           },
         },
       },
-      actions = {
-        use_system_clipboard = true,
-        change_dir = {
-          enable = false,
-          global = false,
-          restrict_above_cwd = false,
-        },
-      },
-      filters = {
-        dotfiles = true,
-      },
-      modified = {
-        enable = true,
-        show_on_dirs = true,
-        show_on_open_dirs = true,
-      },
       view = {
-        cursorline = false,
+        cursorline = true,
         float = {
           enable = false,
           quit_on_focus_loss = true,
@@ -112,18 +98,10 @@ return {
             col = 1,
           },
         },
-        hide_root_folder = false,
-        mappings = {
-          custom_only = false,
-          list = {
-            { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-            { key = "h",                  cb = tree_cb("close_node") },
-            { key = "v",                  cb = tree_cb("vsplit") },
-            { key = "s",                  cb = tree_cb("split") },
-            { key = "u",                  action = "dir_up" },
-          },
-        },
-      },
+      }
     })
-  end,
+    vim.cmd [[
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]]
+  end
 }
