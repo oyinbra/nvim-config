@@ -37,7 +37,6 @@ return {
     end
 
     local mappings = {
-      f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       s = { ":source %<cr>", "Source" },
       Y = { ":%d+<cr>", "Delete All Text" },
       r = { ":Telescope oldfiles<CR>", "Recent Files" },
@@ -70,7 +69,9 @@ return {
       d = { ":Alpha<cr>", "Dashboard" },
       q = { ":q!<cr>", "Quit" },
       c = { ":ChatGPT<cr>", "ChatGPT" },
-      w = { ":w<cr>", "Write" },
+      -- f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
+      -- w = { ":w<cr>", "Write" },
+      w = { "<cmd>lua vim.lsp.buf.format()<CR><cmd>w!<CR>", "Format and Save" },
       x = { ":x<cr>", "Write & Quit" },
       b = { ":bdelete<cr>", "Buffer Close" },
       C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
