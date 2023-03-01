@@ -1,5 +1,6 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
+  -- enabled = false,
   event = { "BufReadPost", "BufNewFile" },
   config = function()
     local null_ls = require "null-ls"
@@ -13,12 +14,15 @@ return {
       debug = false,
       sources = {
         formatting.prettier.with {
-          extra_filetypes = { "toml", "solidity" },
+          extra_filetypes = { "toml", "solidity", "md" },
           extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
         },
         formatting.gofumpt,
         formatting.autopep8,
         -- formatting.stylua,
+        -- formatting.markdownlint.with {
+        --   filetypes = { "md" }
+        -- },
         formatting.prettier,
         formatting.clang_format.with {
           filetypes = { "cpp", "c" },
