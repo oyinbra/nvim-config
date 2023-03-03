@@ -19,15 +19,11 @@ map('n', '<C-k>', '<C-w>k', opts)
 -- TODO: To yank text out of vim into system clipboard manager
 map('n', '<C-S>c', '"+y', opts)
 
--- Move text up and down
--- map("x", "<A-j>", ":move '>+1<CR>gv-gv")
--- map("x", "<A-k>", ":move '<-2<CR>gv-gv")
-
 -- NOTE: Press jk or lk to return back to normal mode instead of using the escape key all the time
-map('i', 'kl', '<ESC>', opts)
-map('i', 'lk', '<ESC>', opts)
+map('i', 'jk', '<ESC>', opts)
+map('i', 'kj', '<ESC>', opts)
 map('i', 'JK', '<ESC>', opts)
-map('i', 'LK', '<ESC>', opts)
+map('i', 'KJ', '<ESC>', opts)
 
 -- Tree Toggle
 -- map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
@@ -64,7 +60,7 @@ map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
--- Move Lines
+-- Move Lines up and down
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
 map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
 map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
