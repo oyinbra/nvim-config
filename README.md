@@ -90,3 +90,4 @@ rm /home/$USER/.config/nvim/plugin/packer_compiled.lua
 <p align="center">
 <img src="https://github.com/Oyinbra/nvim-config/raw/main/img/img-05.png" width="800">
 </p>
+
