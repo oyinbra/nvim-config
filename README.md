@@ -1,4 +1,5 @@
 <div align="center">
+
 <p>
     <a>
       <img alt="Linux" src="https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua" />
@@ -39,4 +40,53 @@
 
 </div>
 
-#
+# ⚡️ Introduction
+
+This repo hosts my Neovim configuration and its using Lazy plugin manager.
+
+My setups are well-documented to ensure the greatest clarity. You can clone the whole repo and use it like that or you can choose whatever plugins and configurations that you want and add it to yours as i made sure all settings are separated and easily managed.
+
+# 🚀 Installation and setup
+
+- Backup up your current neovim setup
+```
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+```
+- Clone the stater park into your .config folder
+```
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+```
+- Then start Neovim
+```
+nvim
+```
+- All plugins will be loaded automatically.
+- Quit neovim and restart it to start using it.
+- Run health check on lazy and if you migrated from parker plugin manager, you might have to remove some left over setup from parker.
+```
+rm /home/$USER/.local/share/nvim/site/pack/packer
+rm /home/$USER/.config/nvim/plugin/packer_compiled.lua
+```
+
+# ✨ Features #
+
++ Plugin management via [lazy.nvim](https://github.com/folke/lazy.nvim).
++ Better usabilty via whichkey plugins so you don't have to forget your keys [which-key.nvim](https://github.com/folke/which-key.nvim).
++ Auto-completionCode via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
++ Language server protocol (LSP) support via [mason](https://github.com/williamboman/mason.nvim).
++ Git integration via [lazy-git].
+
+# 📦 Usability
+
+## Which-key with space bar as leader key, then you can choose from the following options to quit, save file, format and save a file plus many other options to choose from
+
+<p align="center">
+<img src="https://github.com/Oyinbra/nvim-config/raw/main/img/img-02.png" width="800">
+</p>
+
+## File or Text search using Telescope
+
+<p align="center">
+<img src="https://github.com/Oyinbra/nvim-config/raw/main/img/img-05.png" width="800">
+</p>
