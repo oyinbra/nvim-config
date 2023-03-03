@@ -36,7 +36,7 @@
 
 <div align="center">
     
-![Screenshot (1423)](https://github.com/Oyinbra/nvim-config/raw/main/img/img-01.png)
+![Screenshot (1423)](https://github.com/Oyinbra/img/raw/main/nvim-img/img-001.png)
 
 </div>
 
@@ -82,12 +82,12 @@ rm /home/$USER/.config/nvim/plugin/packer_compiled.lua
 ## Which-key with space bar as leader key, then you can choose from the following options to quit, save file, format and save a file plus many other options to choose from
 
 <p align="center">
-<img src="https://github.com/Oyinbra/nvim-config/raw/main/img/img-02.png" width="800">
+<img src="https://github.com/Oyinbra/img/raw/main/nvim-img/img-002.png" width="800">
 </p>
 
 ## File or Text search using Telescope
 
 <p align="center">
-<img src="https://github.com/Oyinbra/nvim-config/raw/main/img/img-05.png" width="800">
+<img src="https://github.com/Oyinbra/img/raw/main/nvim-img/img-005.png" width="800">
 </p>
 
