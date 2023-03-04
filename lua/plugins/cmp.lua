@@ -1,6 +1,16 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                    CMP                                       #
+-- #       NOTE:  A completion engine plugin for neovim written in Lua.           #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "hrsh7th/nvim-cmp",
-  event = { "InsertEnter", "CmdlineEnter" },
+  event = {
+    "InsertEnter",
+    "CmdlineEnter"
+  },
   dependencies = {
     "hrsh7th/cmp-buffer", -- Buffer Completions
     "hrsh7th/cmp-path", -- Path Completions
@@ -10,24 +20,7 @@ return {
     "hrsh7th/cmp-cmdline", -- CommandLine Completions
     "L3MON4D3/LuaSnip", -- Snippet Engine
     "rafamadriz/friendly-snippets", -- Bunch of Snippets
-    {
-      "windwp/nvim-autopairs",
-      -- config = function()
-      --   local autopairs = require "nvim-autopairs"
-
-      --   autopairs.setup {
-      --     check_ts = true, -- treesitter integration
-      --     disable_filetype = { "TelescopePrompt" },
-      --   }
-
-      --   local cmp_autopairs = require "nvim-autopairs.completion.cmp"
-      --   local cmp_status_ok, cmp = pcall(require, "cmp")
-      --   if not cmp_status_ok then
-      --     return
-      --   end
-      --   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done {})
-      -- end,
-    },
+    "windwp/nvim-autopairs", -- autopairs
   },
   config = function()
     local cmp = require "cmp"
@@ -140,18 +133,8 @@ return {
         select = false,
       },
       window = {
-        completion = cmp.config.window.bordered {
-          border = "rounded",
-          winhighlight = "Normal:Normal,FloatBorder:CmpCompletionBorder,CursorLine:CmpCursorLine,Search:Search",
-          col_offset = -3,
-          side_padding = 1,
-        },
-        documentation = cmp.config.window.bordered {
-          border = "rounded",
-          winhighlight = "Normal:Normal,FloatBorder:CmpDocumentationBorder,CursorLine:CmpCursorLine,Search:Search",
-          col_offset = -3,
-          side_padding = 1,
-        },
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
       },
       experimental = {
         ghost_text = true,
@@ -164,12 +147,8 @@ return {
         { name = "cmdline" },
       },
       window = {
-        completion = cmp.config.window.bordered {
-          border = "rounded",
-          winhighlight = "Normal:Normal,FloatBorder:CmpCompletionBorder,CursorLine:CmpCursorLine,Search:Search",
-          col_offset = -3,
-          side_padding = 1,
-        },
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
       },
       formatting = {
         -- fields = { 'abbr' },
