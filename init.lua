@@ -22,11 +22,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.termguicolors = true
 
+-- Neovide font fix
+vim.opt.guifont = {"FiraCode Nerd Font:h7"}
+
 -- Lazy plugins plugins
 require('lazy').setup('plugins')
-
--- delay notifications till vim.notify was replaced or after 500ms
--- require("util")
 
 -- Themes settings
 require('theme')
