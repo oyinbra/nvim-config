@@ -1,5 +1,5 @@
 -- set colorscheme
-local name = "catppuccin"
+local name = "tokyonight-moon"
 
 -- Check if there's a colorscheme configuration
 pcall(require, "theme." .. name)
