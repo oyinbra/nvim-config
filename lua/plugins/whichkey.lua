@@ -88,7 +88,7 @@ return {
       },
       l = {
         name = "LSP",
-        f = { ":Format<cr>", "Format" },
+        -- f = { ":Format<cr>", "Format Toggle" },
         a = { ":Lspsaga code_action<cr>", "Code Action" },
         g = { toggle_lazygit, "LazyGit" },
         i = { ":LspInstall<cr>", "Install" },

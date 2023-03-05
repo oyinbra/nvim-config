@@ -9,15 +9,15 @@ return {
   -- notify setup
   {
     "rcarriga/nvim-notify",
-    event = "BufEnter",
     -- enabled = false,
+    event = "BufEnter",
     config = function()
       require("notify").setup({
         stages = "fade_in_slide_out",
-        -- background_colour = "FloatShadow",
+        background_colour = "FloatShadow",
+        -- background_colour = "#121212",
         timeout = 3000,
-        background_colour = "#121212",
-        -- max_width = 80,
+        max_width = 80,
       })
       vim.notify = require("notify")
     end,

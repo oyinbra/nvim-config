@@ -19,6 +19,8 @@ map('n', '<C-k>', '<C-w>k', opts)
 
 -- TODO: To yank text out of vim into system clipboard manager
 map('n', '<C-S>c', '"+y', opts)
+map('v', '<C-S>c', '"+y', opts)
+map('i', '<C-S>c', '"+y', opts)
 
 -- NOTE: Press jk or lk to return back to normal mode instead of using the escape key all the time
 map('i', 'jk', '<ESC>', opts)

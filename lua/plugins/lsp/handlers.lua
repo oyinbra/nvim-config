@@ -42,8 +42,8 @@ M.setup = function()
     },
   }
 
-  -- NOTE: text document hover and signature is now haddled by noice plugins
- 
+  -- NOTE: text document hover and signature is now handled by noice plugins
+
   -- vim.diagnostic.config(config)
   -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   --   border = "rounded",
