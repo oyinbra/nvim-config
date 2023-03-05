@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                  STALINE                                     #
+-- #         NOTE: A modern lightweight statusline and bufferline plugin          #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "tamton-aquib/staline.nvim",
   -- enabled = false,

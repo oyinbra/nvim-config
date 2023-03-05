@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                  COMMENT                                     #
+-- #        NOTE: A comment toggler for Neovim using gc or gcc to comment         #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "terrortylor/nvim-comment",
   config = function()

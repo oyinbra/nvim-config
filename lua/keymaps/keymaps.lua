@@ -2,6 +2,7 @@
 -- #                                                                              #
 -- #                                   KEYMAPS                                    #
 -- #                                                                              #
+-- #                                                                              #
 -- ################################################################################
 
 local M = {}
@@ -75,7 +76,7 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 -- taken from runtime/lua/_editor.lua
 map(
   "n",
-  "<leader>ur",
+  "<leader>Wr",
   "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
   { desc = "Redraw / clear hlsearch / diff update" }
 )
@@ -86,10 +87,10 @@ map(
 -- map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 -- windows
-map("n", "<leader>uw", "<C-W>p", { desc = "Other window" })
-map("n", "<leader>ud", "<C-W>c", { desc = "Delete window" })
-map("n", "<leader>u-", "<C-W>s", { desc = "Split window below" })
-map("n", "<leader>u|", "<C-W>v", { desc = "Split window right" })
+map("n", "<leader>Ww", "<C-W>p", { desc = "Other window" })
+map("n", "<leader>Wd", "<C-W>c", { desc = "Delete window" })
+map("n", "<leader>W-", "<C-W>s", { desc = "Split window below" })
+map("n", "<leader>W|", "<C-W>v", { desc = "Split window right" })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
 

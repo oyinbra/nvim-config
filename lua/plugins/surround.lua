@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                SURROUND                                      #
+-- #    NOTE: Add, change, delete surrounding delimiter pairs with ease           #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "kylechui/nvim-surround",
   enabled = false,

@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                             TOGGLE TERMINAL                                  #
+-- #   NOTE: A neovim lua plugin to help easily manage multiple terminal windows  #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "akinsho/toggleterm.nvim",
   config = function()

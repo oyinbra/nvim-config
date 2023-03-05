@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                 TELESCOPE                                    #
+-- #         NOTE: Find, Filter, Preview, Pick. All file, all the time.           #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = 'nvim-lua/plenary.nvim',

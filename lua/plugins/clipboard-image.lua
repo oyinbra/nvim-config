@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                CLIPBOARD IMAGE                               #
+-- #          NOTE: Neovim Lua plugin to paste image from clipboard.              #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   'ekickx/clipboard-image.nvim',
   config = function()

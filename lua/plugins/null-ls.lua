@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                     NULL LS                                  #
+-- #      NOTE: Injects LSP diagnostics, code actions, and more via Lua           #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "jose-elias-alvarez/null-ls.nvim",
   -- enabled = false,

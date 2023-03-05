@@ -1,6 +1,7 @@
 -- ################################################################################
 -- #                                                                              #
 -- #                                WHICHKEY CONFIG                               #
+-- #                     NOTE: Create key bindings that stick                     #
 -- #                                                                              #
 -- ################################################################################
 
@@ -45,7 +46,7 @@ return {
       -- ["3"] = { ":NeoTreeFocus<cr>", "Close Explorer" },
       e = { ":NvimTreeOpen<cr>", "Explorer Open" },
       ["3"] = { ":NvimTreeToggle<cr>", "Explorer Toggle" },
-      u = {
+      W = {
         name = "Window",
       },
       h = {
@@ -68,15 +69,15 @@ return {
       },
       d = { ":Alpha<cr>", "Dashboard" },
       q = { ":q!<cr>", "Quit" },
-      c = { ":ChatGPT<cr>", "ChatGPT" },
+      g = { ":ChatGPT<cr>", "ChatGPT" },
       -- f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       -- w = { ":w<cr>", "Write" },
       w = { "<cmd>lua vim.lsp.buf.format()<CR><cmd>w!<CR>", "Format and Save" },
       x = { ":x<cr>", "Write & Quit" },
-      b = { ":bdelete<cr>", "Buffer Close" },
-      C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
-      [" "] = { ":Telescope find_files<cr>", "Telescope Find Files" },
-      g = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
+      c = { ":bdelete<cr>", "Close Buffer" },
+      -- C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
+      [" "] = { ":Telescope find_files<cr>", "Find Files" },
+      F = { ":Telescope live_grep<cr>", "Find Text" },
       t = {
         name = "Terminal",
         f = { ":ToggleTerm direction=float<cr>", "Float" },

@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                              TWILIGHT                                        #
+-- #   NOTE: dims inactive portions of the code you're editing using TreeSitter.  #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   "folke/twilight.nvim",
   config = function()

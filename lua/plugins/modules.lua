@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                  MODULES                                     #
+-- #            NOTE: Just to load in other additional plugins                    #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   { -- Additional text objects via treesitter
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -13,7 +20,7 @@ return {
   { "rafi/awesome-vim-colorschemes" }, -- Color Schemes
   -- { "tpope/vim-surround" }, -- Surrounding ysw
   { "mattn/emmet-vim" },
-  { "airblade/vim-gitgutter" },
+  { "airblade/vim-gitgutter" }, -- A Vim plugin which shows git diff markers in the sign column
   {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter"
@@ -32,6 +39,6 @@ return {
       require("persistence").setup()
     end,
   },
-  -- makes some plugins dot-repeatable like leap
-  { "tpope/vim-repeat", event = "VeryLazy" },
+  { "tpope/vim-repeat", event = "VeryLazy" }, -- makes some plugins dot-repeatable like leap
+  -- { "typicode/bg.nvim" }, -- automatically sync your terminal background with your color scheme
 }

@@ -1,3 +1,10 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                              TREE SITTER                                     #
+-- #                      NOTE: Btter text hightlighting                          #
+-- #                                                                              #
+-- ################################################################################
+
 return {
   -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
@@ -78,8 +85,8 @@ return {
         },
         swap = {
           enable = true,
-          swap_next = { ['<leader>a'] = '@parameter.inner' },
-          swap_previous = { ['<leader>A'] = '@parameter.inner' }
+          -- swap_next = { ['<leader>a'] = '@parameter.inner' },
+          -- swap_previous = { ['<leader>A'] = '@parameter.inner' }
         }
       }
     }

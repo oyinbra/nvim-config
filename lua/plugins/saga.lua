@@ -1,5 +1,13 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                 LSPSAGA                                      #
+-- #                             NOTE: for lsp                                    #
+-- #                                                                              #
+-- ################################################################################
+
 return {
-  'tami5/lspsaga.nvim',
+  -- 'tami5/lspsaga.nvim',
+  "glepnir/lspsaga.nvim",
   -- enabled = false,
   config = function()
     local lspsaga = require 'lspsaga'
