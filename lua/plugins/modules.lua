@@ -18,7 +18,6 @@ return {
   { "ap/vim-css-color" }, -- CSS Color Preview
   { "wakatime/vim-wakatime" }, -- Time spent on nvim. API key needed
   { "rafi/awesome-vim-colorschemes" }, -- Color Schemes
-  -- { "tpope/vim-surround" }, -- Surrounding ysw
   { "mattn/emmet-vim" },
   { "airblade/vim-gitgutter" }, -- A Vim plugin which shows git diff markers in the sign column
   {
