@@ -79,7 +79,7 @@ return {
       [" "] = { ":Telescope find_files<cr>", "Find Files" },
       F = { ":Telescope live_grep<cr>", "Find Text" },
       t = {
-        name = "Terminal",
+        name = "Terminal/ToDo/Trouble",
         f = { ":ToggleTerm direction=float<cr>", "Float" },
         b = { ":ToggleTerm size=10 direction=horizontal<cr>", "Below" },
         s = { ":ToggleTerm size=50 direction=vertical<cr>", "Side" },
