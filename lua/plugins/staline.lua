@@ -42,8 +42,8 @@ return {
         branch_symbol = "  ",
       },
       special_table = {
-        NvimTree         = { 'File Explorer', ' ' },
-        lazy          = { 'Lazy', ' ' },
+        NvimTree        = { 'File Explorer', ' ' },
+        lazy            = { 'Lazy', ' ' },
         TelescopePrompt = { 'Telescope', ' ' }
       },
     })
