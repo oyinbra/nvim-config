@@ -2,6 +2,7 @@
 -- #                                                                              #
 -- #                                   INIT ROOT                                  #
 -- #                                                                              #
+-- #                                                                              #
 -- ################################################################################
 
 local M = {}
@@ -23,9 +24,9 @@ vim.g.maplocalleader = ' '
 vim.opt.termguicolors = true
 
 -- Neovide font fix
-vim.opt.guifont = {"FiraCode Nerd Font:h7"}
+vim.opt.guifont = { "FiraCode Nerd Font:h7" }
 
--- Lazy plugins plugins
+-- Lazy plugins
 require('lazy').setup('plugins')
 
 -- Themes settings
