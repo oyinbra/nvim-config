@@ -8,6 +8,10 @@
 return {
   "tamton-aquib/staline.nvim",
   -- enabled = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons"
+
+  },
   config = function()
     local percentage = function()
       local current_line = vim.fn.line(".")
@@ -44,7 +48,8 @@ return {
       special_table = {
         NvimTree        = { 'File Explorer', ' ' },
         lazy            = { 'Lazy', ' ' },
-        TelescopePrompt = { 'Telescope', ' ' }
+        TelescopePrompt = { 'Telescope', ' ' },
+        Trouble         = { 'Trouble', ' ' },
       },
     })
 
