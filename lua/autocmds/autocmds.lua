@@ -76,4 +76,12 @@ vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
   command = "checktime",
 })
 
+-- fix comment on new line
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*" },
+  callback = function()
+    vim.cmd([[set formatoptions-=cro]])
+  end,
+})
+
 return M
