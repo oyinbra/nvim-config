@@ -5,8 +5,6 @@
 -- #                                                                              #
 -- ################################################################################
 
-local M = {}
-
 -- LazyVim setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -40,5 +38,3 @@ require('keymaps.keymaps')
 
 -- Autocmds
 require('autocmds.autocmds')
-
-return M
