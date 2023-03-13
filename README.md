@@ -46,6 +46,14 @@ This repo hosts my Neovim configuration and its using Lazy plugin manager.
 
 My setups are well-documented to ensure the greatest clarity. You can clone the whole repo and use it like that or you can choose whatever plugins and configurations that you want and add it to yours as i made sure all settings are separated and easily managed.
 
+# ✨ Features #
+
++ Plugin management via [lazy.nvim](https://github.com/folke/lazy.nvim).
++ Better usabilty via whichkey plugins so you don't have to forget your keys [which-key.nvim](https://github.com/folke/which-key.nvim).
++ Auto-completionCode via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
++ Language server protocol (LSP) support via [mason](https://github.com/williamboman/mason.nvim).
++ Git integration via [lazy-git].
+
 # 🚀 Installation and setup
 
 - Backup up your current neovim setup
@@ -69,17 +77,9 @@ rm /home/$USER/.local/share/nvim/site/pack/packer
 rm /home/$USER/.config/nvim/plugin/packer_compiled.lua
 ```
 
-# ✨ Features #
-
-+ Plugin management via [lazy.nvim](https://github.com/folke/lazy.nvim).
-+ Better usabilty via whichkey plugins so you don't have to forget your keys [which-key.nvim](https://github.com/folke/which-key.nvim).
-+ Auto-completionCode via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
-+ Language server protocol (LSP) support via [mason](https://github.com/williamboman/mason.nvim).
-+ Git integration via [lazy-git].
-
 # 📦 Usability
 
-## Which-key with space bar as leader key, then you can choose from the following options to quit, save file, format and save a file plus many other options to choose from
+##  Which-key with space bar as leader key, then you can choose from the following options to quit, save file, format and save a file plus many other options to choose from
 
 <p align="center">
 <img src="https://github.com/Oyinbra/img/raw/main/nvim-img/img-002.png" width="800">
@@ -90,4 +90,7 @@ rm /home/$USER/.config/nvim/plugin/packer_compiled.lua
 <p align="center">
 <img src="https://github.com/Oyinbra/img/raw/main/nvim-img/img-005.png" width="800">
 </p>
+
+# 🐞 Find a bug?
+If you found an issue or would like to submit an improvement to this project, please submit an issue using the issue tab above. If you would love to submit a PR with a fix, reference the issue you created.
 
