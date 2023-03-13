@@ -57,7 +57,6 @@ return {
       views = {
         cmdline_popup = {
           border = {
-            -- style = { "▄", "▄", "▄", "█", "▀", "▀", "▀", "█", "1" }, -- [ top top top - right - bottom bottom bottom - left ]
             style = "rounded",
             padding = { 0, 0 },
           },
