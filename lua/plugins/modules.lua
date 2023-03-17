@@ -39,5 +39,4 @@ return {
     end,
   },
   { "tpope/vim-repeat", event = "VeryLazy" }, -- makes some plugins dot-repeatable like leap
-  -- { "typicode/bg.nvim" }, -- automatically sync your terminal background with your color scheme
 }
