@@ -17,7 +17,7 @@ If you wish to contribute to nvim-config, you should:
 ```
 cd ~/.config/nvim
 ````
-4. Create a new branch and chage into the new branch
+4. Create a new branch and change into the new branch
 ```
 git checkout -b New_Branch
 ```
