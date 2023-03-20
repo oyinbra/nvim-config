@@ -54,6 +54,10 @@ return {
         h = { ":checkhealth<cr>", "Health" },
         l = { ":checkhealth lazy<cr>", "Lazy" },
       },
+      P = {
+        name = "Preview",
+        m = { ":MarkdownPreviewToggle<cr>", "Markdown PreviewT oggle" },
+      },
       p = {
         name = "Plugins",
         c = { ":Lazy clean<cr>", "Clean" },
@@ -69,7 +73,7 @@ return {
       },
       d = { ":Alpha<cr>", "Dashboard" },
       q = { ":q!<cr>", "Quit" },
-      g = { ":ChatGPT<cr>", "ChatGPT" },
+      C = { ":ChatGPT<cr>", "ChatGPT" },
       -- f = { ":lua vim.lsp.buf.format()<cr>", "Format" },
       -- w = { ":w<cr>", "Write" },
       w = { "<cmd>lua vim.lsp.buf.format()<CR><cmd>w!<CR>", "Format and Save" },
