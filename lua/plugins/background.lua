@@ -7,6 +7,6 @@
 
 return {
   "typicode/bg.nvim",
-  enabled = false,
+  -- enabled = false,
   lazy = false,
 }

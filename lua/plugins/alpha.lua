@@ -138,7 +138,7 @@ return {
     dashboard.section.buttons.val = {
       dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
       dashboard.button("F", "  Find Text", ":Telescope live_grep<CR>"),
-      -- dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+      -- dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
       dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
       -- dashboard.button("c", "  Configuration", ":e $MYVIMRC<CR>"),
       dashboard.button("u", "  Update Plugins", ":Lazy update<CR>"),
