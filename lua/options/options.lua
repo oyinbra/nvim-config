@@ -34,6 +34,7 @@ vim.o.mouse = "a"
 vim.wo.wrap = false
 vim.wo.number = true -- set numbers
 opt.relativenumber = true -- Relative line numbers
+-- opt.statuscolumn = "%l %r"
 vim.o.cursorline = true
 vim.wo.signcolumn = "yes"
 vim.o.tabstop = 2
@@ -62,5 +63,5 @@ vim.o.confirm = true -- Confirm to save changes before exiting modified buffer
 -- vim.o.grepprg = "rg --vimgrep"
 -- vim.o.splitbelow = true -- Put new windows below current
 -- vim.o.splitright = true -- Put new windows right of current
-
 return M
+
