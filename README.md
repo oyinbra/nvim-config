@@ -74,7 +74,7 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 - Clone the stater park into your .config folder
 
 ```
-git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/Oyinbra/nvim-config.git ~/.config/nvim
 ```
 
 - Then start Neovim
