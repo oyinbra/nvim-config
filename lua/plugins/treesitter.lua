@@ -31,7 +31,7 @@ return {
         'python',
         'rust',
         'typescript',
-        'help',
+        -- 'help',
         'vim',
         'regex',
         'bash',
