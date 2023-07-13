@@ -7,6 +7,7 @@
 
 return {
   'ekickx/clipboard-image.nvim',
+  enabled = false,
   config = function()
     require'clipboard-image'.setup {
       -- Default configuration for all filetype
