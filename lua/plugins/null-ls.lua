@@ -24,8 +24,8 @@ return {
           extra_filetypes = { "toml", "solidity", "md" },
           extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
         },
-        formatting.gofumpt,
-        formatting.autopep8,
+        -- formatting.gofumpt,
+        -- formatting.autopep8,
         -- formatting.stylua,
         -- formatting.markdownlint.with {
         --   filetypes = { "md" }

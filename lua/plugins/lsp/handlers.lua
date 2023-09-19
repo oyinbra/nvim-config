@@ -91,41 +91,41 @@ local function lsp_highlight(client, bufnr)
   end
 end
 
-local function disable_format_on_save()
-  vim.api.nvim_del_augroup_by_name "Format on save"
-  vim.notify("Format on save is now disabled", vim.log.levels.INFO)
-end
+-- local function disable_format_on_save()
+--   vim.api.nvim_del_augroup_by_name "Format on save"
+--   vim.notify("Format on save is now disabled", vim.log.levels.INFO)
+-- end
 
-local function enable_format_on_save(client)
-  vim.api.nvim_create_augroup("Format on save", { clear = false })
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    callback = function()
-      vim.lsp.buf.format {
-        filter = function()
-          if client.supports_method "textDocument/formatting" then
-            return client.name ~= "null-ls"
-          else
-            return "null-ls"
-          end
-        end,
-      }
-    end,
-    group = "Format on save",
-  })
-  vim.notify("Format on save is now enabled", vim.log.levels.INFO)
-end
+-- local function enable_format_on_save(client)
+--   vim.api.nvim_create_augroup("Format on save", { clear = false })
+--   vim.api.nvim_create_autocmd("BufWritePre", {
+--     callback = function()
+--       vim.lsp.buf.format {
+--         filter = function()
+--           if client.supports_method "textDocument/formatting" then
+--             return client.name ~= "null-ls"
+--           else
+--             return "null-ls"
+--           end
+--         end,
+--       }
+--     end,
+--     group = "Format on save",
+--   })
+--   vim.notify("Format on save is now enabled", vim.log.levels.INFO)
+-- end
 
-M.on_attach = function(client, bufnr)
-  lsp_keymaps(bufnr)
-  lsp_highlight(client, bufnr)
-  vim.api.nvim_create_user_command("FormatOnSaveToggle", function()
-    if vim.fn.exists "#Format on save#BufWritePre" == 0 then
-      enable_format_on_save(client)
-    else
-      disable_format_on_save()
-    end
-  end, { nargs = "*" })
-  client.server_capabilities.semanticTokensProvider = nil
-end
+-- M.on_attach = function(client, bufnr)
+--   lsp_keymaps(bufnr)
+--   lsp_highlight(client, bufnr)
+--   vim.api.nvim_create_user_command("FormatOnSaveToggle", function()
+--     if vim.fn.exists "#Format on save#BufWritePre" == 0 then
+--       enable_format_on_save(client)
+--     else
+--       disable_format_on_save()
+--     end
+--   end, { nargs = "*" })
+--   client.server_capabilities.semanticTokensProvider = nil
+-- end
 
 return M
