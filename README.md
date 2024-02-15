@@ -7,24 +7,30 @@
     }
   </style>
   
-  <!-- Open Source -->
+  <!-- Open Source Badges -->
+  <div class="open-source-badges">
+
   [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103&style=for-the-badge)](https://github.com/ellerbrock/open-source-badge/)
   [![MIT License](https://badges.frapsoft.com/os/mit/mit.svg?v=103&style=for-the-badge)](https://opensource.org/licenses/mit-license.php)
   [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-  
+
+  </div>
+
+  <!-- Activities -->
   [![Made with Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?v=103&logo=lua&style=for-the-badge)](#)
   [![Linux](https://img.shields.io/badge/Linux-%23.svg?v=103&logo=linux&color=FCC624&logoColor=black&style=for-the-badge)](#)
   [![macOS](https://img.shields.io/badge/macOS-%23.svg?v=103&logo=apple&color=000000&logoColor=white&style=for-the-badge)](#)
   [![Windows](https://img.shields.io/badge/Windows-%23.svg?v=103&logo=windows&color=0078D6&logoColor=white&style=for-the-badge)](#)
   [![Neovim minimum version](https://img.shields.io/badge/Neovim-0.8+-blueviolet.svg?v=103&color=000F10&logo=Neovim&logoColor=green&labelColor=302D41&style=for-the-badge)](https://github.com/neovim/neovim/releases/tag/stable)
   [![Top languages](https://img.shields.io/github/languages/top/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](https://github.com/Oyinbra/nvim-config/search?l=vim-script)
-  <!-- Activities -->
   [![Commit Activity](https://img.shields.io/github/commit-activity/m/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](https://github.com/Oyinbra/nvim-config/graphs/commit-activity)
   [![Last commit](https://img.shields.io/github/last-commit/Oyinbra/nvim-config?svg?v=103&logo=git&color=000F10&logoColor=darkorange&labelColor=302D41&style=for-the-badge)](#)
   [![Contributors](https://img.shields.io/github/contributors/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](https://github.com/Oyinbra/nvim-config/graphs/contributors)
   [![Repository Size](https://img.shields.io/github/repo-size/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](#)
+  
 </div>
 <!-- BADGE END -->
+
     
 ![Screenshot (1423)](https://github.com/Oyinbra/img/raw/main/nvim-img/img-001.png)
 
