@@ -8,6 +8,7 @@
 return {
   -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  -- disable = tr
   build = function()
     pcall(require('nvim-treesitter.install').update { with_sync = true })
   end,
@@ -47,7 +48,7 @@ return {
       rainbow = {
         enable = true,
         extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        max_file_lines = nil -- Do not enable for files with more than n lines, int
+        max_file_lines = nil   -- Do not enable for files with more than n lines, int
         -- colors = {}, -- table of hex strings
         -- termcolors = {} -- table of colour name strings
       },
@@ -78,10 +79,10 @@ return {
         move = {
           enable = true,
           set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = { [']m'] = '@function.outer',[']]'] = '@class.outer' },
-          goto_next_end = { [']M'] = '@function.outer',[']['] = '@class.outer' },
-          goto_previous_start = { ['[m'] = '@function.outer',['[['] = '@class.outer' },
-          goto_previous_end = { ['[M'] = '@function.outer',['[]'] = '@class.outer' }
+          goto_next_start = { [']m'] = '@function.outer', [']]'] = '@class.outer' },
+          goto_next_end = { [']M'] = '@function.outer', [']['] = '@class.outer' },
+          goto_previous_start = { ['[m'] = '@function.outer', ['[['] = '@class.outer' },
+          goto_previous_end = { ['[M'] = '@function.outer', ['[]'] = '@class.outer' }
         },
         swap = {
           enable = true,
@@ -94,7 +95,7 @@ return {
     vim.lsp.handlers['textDocument/publishDiagnostics'] =
         vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
           underline = true,
-          virtual_text = { spacing = 5, severity_limit = 'Warning' },
+          virtual_text = { spacing = 5,  severity = { min = vim.diagnostic.severity.WARN } },
           update_in_insert = true
         })
     require 'nvim-treesitter.configs'.setup {
@@ -104,7 +105,7 @@ return {
       rainbow = {
         enable = true,
         extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        max_file_lines = nil -- Do not enable for files with more than n lines, int
+        max_file_lines = nil   -- Do not enable for files with more than n lines, int
         -- colors = {}, -- table of hex strings
         -- termcolors = {} -- table of colour name strings
       },
