@@ -43,7 +43,7 @@ return {
       end,
     },
   },
-  tag = 'nightly', -- optional, updated every week. (see issue #1193)
+  -- tag = 'nightly', -- optional, updated every week. (see issue #1193)
   config = function()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
